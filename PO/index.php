@@ -285,7 +285,7 @@
         			<div class="col-md-4 col-sm-6 item product">
                         <div class="row">
                             <div class="col-md-12">
-                                <a href="#">
+                                <a href="premios.php">
                                     <img class="lazy" data-original="../img/prices.png" alt="Rack, Papelão Display, materiais de publicidade, pop, embalagens."/>
                                     <p>Prêmios</p>
                                     <div class="viewmore"></div>

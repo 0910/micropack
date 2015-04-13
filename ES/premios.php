@@ -11,7 +11,12 @@
 
     // carga registros
     $arrProducts = array();
-    $query = "SELECT idProduct, title, images, cover, category, orderby FROM products WHERE price = '1' ORDER BY orderby DESC";
+     if (empty($_GET['cat'])){
+        $query = "SELECT idProduct, title, images, cover, category, orderby FROM products WHERE price = '1' ORDER BY idProduct DESC";
+    }
+    if (!empty($_GET['cat'])){
+        $query = "SELECT idProduct, title, images, cover, category, orderby FROM products WHERE price = '1' AND category = '{$_GET['cat']}' ORDER BY idProduct DESC";
+    }
     $resultado = mysql_query($query, $dbConn);
     while ($row = mysql_fetch_assoc($resultado)){
     array_push($arrProducts,$row);
@@ -27,7 +32,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <a href="detaller.php?idProduct='. $idProduct .'" rel="'. $idProduct .'">
-                                            <img src="'. $imagesdecoded[$cover] .'" alt="'. $title .'" description="Exhibidor, Exhibidores de carton, material publicitario, pop, packaging."/>
+                                            <img class="lazy" data-original="'. $imagesdecoded[$cover] .'" alt="'. $title .'" description="Exhibidor, Exhibidores de carton, material publicitario, pop, packaging."/>
                                             <p>'. $title .'</p>
                                             <div class="viewmore"></div>
                                         </a>
@@ -45,55 +50,6 @@
     <?php include("../inc/menu.php"); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="row filters">
-                    <div class="row">
-                        <div class="col-md-3 filter" data-filter=".mega">
-                            <div class="filterbox">
-                                <a href="#">Mega Exhibidores</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".arcos">
-                            <div class="filterbox">
-                                <a href="#">Botaderos</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".depie">
-                            <div class="filterbox">
-                                <a href="#">Exhibidores de pie</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".displays">
-                            <div class="filterbox">
-                                <a href="#">Box Pallet®</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".islas">
-                            <div class="filterbox">
-                                <a href="#">Islas</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".botaderos">
-                            <div class="filterbox">
-                                <a href="#">Exhibidores de Mostrador</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".automaticos">
-                            <div class="filterbox">
-                                <a href="#">Displays automáticos</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".packaging">
-                            <div class="filterbox">
-                                <a href="#">Packaging</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row exp_loader" id="loader"></div>
-            </div>
-        </div>
-        <div class="row">
             <div id="experiencias">
                 <?php echo $bufferProducts; ?>
             </div>
@@ -102,12 +58,8 @@
     </div><!-- /.container -->
     <script type="text/javascript">
         $(function(){
-            $('#experiencias').mixItUp({
-                animation: {
-                    duration: 600,
-                    effects: 'fade',
-                    easing: 'ease'
-                }
+            $('img.lazy').lazyload({
+                effect : "fadeIn"
             });
             $('.product a').click(function(event){
                 event.preventDefault();

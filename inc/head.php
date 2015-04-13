@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Empresa fabricante de Mega-Exhibiciones para seasonals, displays de apertura automática, exhibidores de cartón, packaging y POP para punto de venta.">
-<meta name="keywords" content="Exhibidores de Carton">
+<meta name="keywords" content="Pop, Packaging, Displays publicitarios, mega exhibiciones, seasonals, displays de chao, displays de balcao, floortsands, bins, carboard pop, pop de papelao, diplays de papelao, cardboard displays, exhibidores sustentables">
 <meta name="author" content="NUEVEDIEZ">
 <title>Micropack · Diseño y desarrollo de exhibidores de cartón para punto de venta.</title>
 <link rel="icon" href="../../favicon.ico">

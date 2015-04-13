@@ -10,8 +10,14 @@
     $dbConn = conectar();
 
     // carga registros
+    // carga registros
     $arrProducts = array();
-    $query = "SELECT idProduct, title3, images, cover, category, orderby FROM products WHERE price = '1' ORDER BY orderby DESC";
+     if (empty($_GET['cat'])){
+        $query = "SELECT idProduct, title, images, cover, category, orderby FROM products WHERE price = '1' ORDER BY idProduct DESC";
+    }
+    if (!empty($_GET['cat'])){
+        $query = "SELECT idProduct, title, images, cover, category, orderby FROM products WHERE price = '1' AND category = '{$_GET['cat']}' ORDER BY idProduct DESC";
+    }
     $resultado = mysql_query($query, $dbConn);
     while ($row = mysql_fetch_assoc($resultado)){
     array_push($arrProducts,$row);
@@ -27,7 +33,7 @@
                                 <div class="row">
                                     <div class="col-md-12">
                                         <a href="detaller.php?idProduct='. $idProduct .'" rel="'. $idProduct .'">
-                                            <img src="'. $imagesdecoded[$cover] .'" alt="'. $title .'" description="Rack, Papelão Display, materiais de publicidade, pop, embalagens."/>
+                                            <img class="lazy" data-original="'. $imagesdecoded[$cover] .'" alt="'. $title .'" description="Rack, Papelão Display, materiais de publicidade, pop, embalagens."/>
                                             <p>'. $title .'</p>
                                             <div class="viewmore"></div>
                                         </a>
@@ -44,55 +50,6 @@
   <body>
     <?php include("../inc/menu.php"); ?>
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row filters">
-                    <div class="row">
-                        <div class="col-md-3 filter" data-filter=".mega">
-                            <div class="filterbox">
-                                <a href="#">Mega Expositores</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".arcos">
-                            <div class="filterbox">
-                                <a href="#">Botaderos</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".depie">
-                            <div class="filterbox">
-                                <a href="#">Expositores de pé</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".displays">
-                            <div class="filterbox">
-                                <a href="#">Box Pallet®</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".islas">
-                            <div class="filterbox">
-                                <a href="#">Islas</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".botaderos">
-                            <div class="filterbox">
-                                <a href="#">Expositores de Balcão</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".automaticos">
-                            <div class="filterbox">
-                                <a href="#">Displays automáticas</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 filter" data-filter=".packaging">
-                            <div class="filterbox">
-                                <a href="#">Packaging</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row exp_loader" id="loader"></div>
-            </div>
-        </div>
         <div class="row">
             <div id="experiencias">
                 <?php echo $bufferProducts; ?>
