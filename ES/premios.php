@@ -50,6 +50,55 @@
     <?php include("../inc/menu.php"); ?>
     <div class="container">
         <div class="row">
+            <div class="col-md-12">
+                <div class="row filters">
+                    <div class="row">
+                        <div class="col-md-3 filter" data-filter=".mega">
+                            <div class="filterbox">
+                                <a href="#">Mega Exhibidores</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".arcos">
+                            <div class="filterbox">
+                                <a href="#">Botaderos</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".depie">
+                            <div class="filterbox">
+                                <a href="#">Exhibidores de pie</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".displays">
+                            <div class="filterbox">
+                                <a href="#">Box Pallet®</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".islas">
+                            <div class="filterbox">
+                                <a href="#">Islas</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".botaderos">
+                            <div class="filterbox">
+                                <a href="#">Exhibidores de Mostrador</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".automaticos">
+                            <div class="filterbox">
+                                <a href="#">Displays automáticos</a>
+                            </div>
+                        </div>
+                        <div class="col-md-3 filter" data-filter=".packaging">
+                            <div class="filterbox">
+                                <a href="#">Packaging</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row exp_loader" id="loader"></div>
+            </div>
+        </div>
+        <div class="row">
             <div id="experiencias">
                 <?php echo $bufferProducts; ?>
             </div>

@@ -1,0 +1,7 @@
+<IfModule mod_rewrite.c>
+RewriteCond %{HTTP_HOST} ^micropack.com [NC]
+RewriteRule ^(.*)$ http://www.micropack.com/$1 [R=301,L]
+</IfModule>
+
+Options +FollowSymlinks
+RewriteEngine on
