@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'GothamBold';
+    src: url('fonts/gotham-bold-webfont.eot');
+    src: url('fonts/gotham-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-bold-webfont.woff') format('woff'),
+         url('fonts/gotham-bold-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'GothamBook';
+    src: url('fonts/gotham-book-webfont.eot');
+    src: url('fonts/gotham-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/gotham-book-webfont.woff') format('woff'),
+         url('fonts/gotham-book-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+	font-family: 'GothamBook', helvetica, arial, sans-serif;;
+}
+footer{
+	margin:20px 0;
+}
+.btn{
+	border-radius: 0px;
+}
+.reg-control {
+	text-align: center;
+}
+.reg-control .btn{
+	display: inline-block;
+	float:none;
+}
+.table{
+	margin-bottom: 0;
+}
+.table a{
+	color:#606060;
+}
+.table a:hover{
+	color:#a0a0a0;
+}
+.table .img-thumbnail{
+	max-width: 90px;
+	border-radius: 0px;
+}
+.tab-content{
+	margin-top:20px;
+}
+.infobubbles{
+	padding:20px;
+}
+.infobubbles_center{
+	padding:20px;
+	text-align: center;
+	margin:0;
+}
+.infohr{
+	padding:20px 0;
+	border-bottom:1px solid #EEEEEE;
+}
+.form-control{
+	border-radius: 0px;
+}
+a.goback, a.createnew{
+	color:#606060;
+	float:right;
+	font-size: 16px;
+	margin:10px 0 0 0;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+a.goback:hover, a.createnew:hover{
+	color:#a0a0a0;
+	text-decoration: none;
+}
+/* UPLOADER */
+
+#files{
+	background: none repeat scroll 0 0 #F5F5F5;
+    display: none;
+    float: left;
+    margin: 20px 0;
+    padding: 20px 10px;
+    width: 100%;
+}
+.uploadedImage a{
+	color: #808080;
+    float: left;
+    margin: 5px 0 0;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+}
+.uploadedImage a:hover{
+	color:#a0a0a0;
+}
+.img-thumbnail{
+	border-radius: 0px;
+}
+input.imgdesc{
+	margin: 15px 0 5px 0;
+}
+.progress{
+	border-radius: 0px;
+}
+
+/* NAVBAR */
+
+.navbar{
+	margin-bottom:0px;
+}
+.navbar-nav p {
+    color: #ccc;
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+/* LOGIN */
+
+.btn-black{
+	margin:0;
+	background: #231F20;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-size: 13px;
+    padding:15px;
+}
+.btn-black:hover{
+	background: #606060;
+	text-decoration: none;
+	color:#fff;
+}
+.loginbox{
+	margin-top: 100px;
+    padding: 35px 50px;
+    text-align: center;
+}
+.loginbox input{
+	box-shadow: none;
+	border-color:#ddd;
+}
+.loginbox img{
+	width:100%;
+	height:auto;
+}
+.loginbg{
+	background:#f7f7f7;
+}
+.loginbox .btn{
+	padding:10px 50px;
+}

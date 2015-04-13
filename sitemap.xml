@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://www.micropack.com/v2/ES/</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/index.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/somos.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/premios.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/novedades.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/experiencias.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/contacto.php</loc>
+</url>
+<url>
+  <loc>http://www.micropack.com/v2/ES/noticia.php?idNews=1</loc>
+</url>
+</urlset>

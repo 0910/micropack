@@ -1,0 +1,132 @@
+@media (min-width: 768px){
+	.container{
+		width: 90%;
+	}
+	#menu a{
+		float:left;
+	}
+	.menu a.logo{
+		border: none;
+		margin:0;
+		width:60%;
+		float:left;
+	}
+	.menucaller {
+	    color: #9e9e9e;
+	    float: right;
+	    font-size: 35px;
+	    text-align: right;
+	    width: 40%;
+	    cursor: pointer;
+	}
+	.item.product a{
+		height: 430px;
+	}
+	.item.product a:hover img{
+		-webkit-transform: scale(1.2);
+	    transform: scale(1.2);
+		opacity: 0.2;
+	}
+	.item.product a:hover p, .item.product a:hover h2{
+		opacity: 0.2;
+		text-decoration: none;
+	}
+	.item.product a:hover .viewmore{
+		opacity: 1;
+		-webkit-transform: translate3d(-50%, -50%, 0px) scale(1);
+		transform: translate3d(-50%, -50%, 0px) scale(1);
+	}
+	.footer h2{
+		color:#fff;
+		font-size: 18px;
+		letter-spacing: -0.2px;
+		font-weight: 500;
+		border-top: 1px solid #fff;
+		padding-top:6px;
+	}
+	.footer a.logo{
+		float:left;
+		margin-right: 20px;
+		width: auto;
+		text-align: center;
+		margin-bottom: 16px;
+	}
+	.footer a.logo img{
+		width: 100%;
+		height: auto;
+	}
+	.news{
+		height: 801px;
+	}
+	.quotes{
+		height: 430px;
+	}
+}
+@media (min-width: 1200px){
+	.spacer{
+		margin-top: 32px;
+	}
+	.menu{
+		padding:35px 0;
+	}
+	.menuinside{
+		display: block;
+	}
+	.menu a.logo{
+		width: 100%;
+		float: none;
+	}
+	.menu a{
+		float:left;
+		text-align: left;
+		padding:0 24px 0 0;
+		font-size: 17px;
+	}
+	.menu a:hover{
+		text-decoration: none;
+		color:#6D6E71;
+	}
+	.menu a.logo:hover{
+		border: none;
+		opacity: 0.7;
+	}
+	.container{
+		width: 1130px;
+	}
+	.item.product a{
+		margin:0;
+		height: 339px;
+	}
+	.quotes{
+		margin-top: 0;
+		height: 339px;
+	}
+	.quotes h1{
+		font-size: 46px;
+	}
+	.quotes h3{
+		font-size: 22px;
+	}
+	.team{
+		margin-top:0px;
+	}
+	.news{
+		margin-top: 0px;
+		height: 710px;
+	}
+	.row.footer{
+		margin:0px 0 60px 0;
+	}
+	.row.filters{
+		margin:0px;
+	}
+	#contactform h2{
+		margin:0px 0 16px 0;
+	}
+	#novedades, #premios{
+		margin-top:-32px;
+	}
+	.photo{
+		height: 600px;
+	}
+}
